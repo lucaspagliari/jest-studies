@@ -1,4 +1,4 @@
-module.exports.sum = (n1, n2) => {
+export function sum(n1, n2) {
   /* 
     Segundo parâmetro é o radix/base que é a base em que o número se encontra
     por exemplo: Binária, Octagonal, Decimal

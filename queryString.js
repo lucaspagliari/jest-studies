@@ -9,11 +9,12 @@ const keyValueToString = ([key, value]) => {
 
 }
 
-module.exports.queryString = (obj) =>
-  Object.entries(obj).map(keyValueToString).join("&")
+export function queryString(obj) {
+  return Object.entries(obj).map(keyValueToString).join("&");
+}
 
-module.exports.parse = (qs) =>
-  Object.fromEntries(qs.split("&").map(e => {
+export function parse(qs) {
+  return Object.fromEntries(qs.split("&").map(e => {
     let [key, value] = e.split("=");
 
     if (value.includes(",")) {
@@ -21,3 +22,4 @@ module.exports.parse = (qs) =>
     }
     return [key, value];
   }));
+}
