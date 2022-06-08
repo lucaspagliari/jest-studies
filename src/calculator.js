@@ -6,7 +6,7 @@ export function sum(n1, n2) {
   const a = parseInt(n1, 10);
   const b = parseInt(n2, 10);
 
-  if(isNaN(a) || isNaN(b)) throw Error();
+  if (isNaN(a) || isNaN(b)) throw Error();
 
   return a + b;
 }
